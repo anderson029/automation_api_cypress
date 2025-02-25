@@ -27,7 +27,9 @@ describe('Login de usuário', () => {
       expect(response.body.statusMessage.reason).to.eql('Login Successful');
 
       const token = response.body.statusMessage.token;
+      const userId = response.body.statusMessage.userId;
       Cypress.env('authToken', token);
+      Cypress.env('userId', userId);
       cy.log(JSON.stringify(response.body));
     });
   });
