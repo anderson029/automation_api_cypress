@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker'
 
-const url = `${Cypress.env('BASE_URL')}/accountservice/accountrest/api/v1/register`;
+const URL = `${Cypress.env('BASE_URL')}/accountservice/accountrest/api/v1/register`;
 
 describe('/account service POST', () => {
   let loginName;
@@ -35,7 +35,7 @@ describe('/account service POST', () => {
     };
 
     cy.api({
-      url: url,
+      url: URL,
       method: 'POST',
       body: user,
     }).then(response => {
@@ -44,6 +44,8 @@ describe('/account service POST', () => {
       expect(response.body.response.reason).to.eql('New user created successfully.');
       expect(response.body.response.userId).to.not.be.null
       cy.log(JSON.stringify(response.body))
+
+      cy.task('saveUserData', { loginName, password, email });
     })
   })
 
@@ -66,7 +68,7 @@ describe('/account service POST', () => {
     };
 
     cy.api({
-      url: url,
+      url: URL,
       method: 'POST',
       body: user,
       failOnStatusCode: false

@@ -1,30 +1,34 @@
-describe('Login de usuário', () => {
-    const url = `${Cypress.env('BASE_URL')}/accountservice/accountrest/api/v1/login`;
-  
-    it('Deve fazer login com o usuário criado', () => {
-      const loginName = Cypress.env('loginName');
-      const password = Cypress.env('password');
-      const email = Cypress.env('email');
+import { buildLoginPayload } from '../support/payloadBuilder';
 
-      cy.log(`LoginName criado no teste anterior: ${loginName}`);
-      cy.log(`LoginName: ${loginName}`);
-      cy.log(`Password: ${password}`);
-      cy.log(`Email: ${email}`);
-  
-      const credentials = {
-        email: email,
-        loginName: loginName,
-        password: password,
-      };
-  
-      cy.api({
-        url: url,
-        method: 'POST',
-        body: credentials,
-      }).then((response) => {
-        expect(response.status).to.eql(200);
-        expect(response.body.response.reason).to.eql('Login successful');
-        cy.log(JSON.stringify(response.body));
-      });
+describe('Login de usuário', () => {
+  const LOGIN_ENDPOINT = `${Cypress.env('BASE_URL')}/accountservice/accountrest/api/v1/login`;
+
+  const getUserCredentials = () => {
+    return cy.task('getUserData').then((userData) => {
+      Cypress.env('loginName', userData.loginName);
+      Cypress.env('password', userData.password);
+      Cypress.env('email', userData.email);
+    });
+  };
+
+  before(() => {
+    getUserCredentials();
+  });
+
+  it('Deve fazer login com o usuário criado', () => {
+    const credentials = buildLoginPayload();
+
+    cy.api({
+      url: LOGIN_ENDPOINT,
+      method: 'POST',
+      body: credentials,
+    }).then((response) => {
+      expect(response.status).to.eql(200);
+      expect(response.body.statusMessage.reason).to.eql('Login Successful');
+
+      const token = response.body.statusMessage.token;
+      Cypress.env('authToken', token);
+      cy.log(JSON.stringify(response.body));
     });
   });
+});
