@@ -1,8 +1,7 @@
 import { buildLoginPayload } from '../support/payloadBuilder';
+const LOGIN_ENDPOINT = `${Cypress.env('BASE_URL')}/accountservice/accountrest/api/v1/login`;
 
 describe('Login de usuário', () => {
-  const LOGIN_ENDPOINT = `${Cypress.env('BASE_URL')}/accountservice/accountrest/api/v1/login`;
-
   const getUserCredentials = () => {
     return cy.task('getUserData').then((userData) => {
       Cypress.env('loginName', userData.loginName);
