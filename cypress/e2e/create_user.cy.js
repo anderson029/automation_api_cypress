@@ -2,34 +2,6 @@ import { faker } from '@faker-js/faker';
 
 const URL = `${Cypress.env('BASE_URL')}/accountservice/accountrest/api/v1/register`;
 
-const createUser = (userData) => {
-  return cy.api({
-    url: URL,
-    method: 'POST',
-    body: userData,
-    failOnStatusCode: false
-  });
-};
-
-const generateUserData = () => {
-  return {
-    accountType: "ADMIN",
-    address: "Rua Setenta e Seis",
-    allowOffersPromotion: true,
-    aobUser: false,
-    cityName: "Florida",
-    country: "UNITED_STATES_US",
-    email: `admin@yopmail.com`,
-    firstName: "Admin",
-    lastName: "last",
-    loginName: `Anderson${faker.name.lastName()}`,
-    password: 'Admin@123',
-    phoneNumber: "+55011984848484",
-    stateProvince: "NY",
-    zipcode: "78058482"
-  };
-};
-
 describe('Account users', () => {
   let userData;
 
@@ -52,4 +24,32 @@ describe('Account users', () => {
       expect(response.body.response.reason).to.eql('User name already exists');
     });
   });
+
+  const createUser = (userData) => {
+    return cy.api({
+      url: URL,
+      method: 'POST',
+      body: userData,
+      failOnStatusCode: false
+    });
+  };
+  
+  const generateUserData = () => {
+    return {
+      accountType: "ADMIN",
+      address: "Rua Setenta e Seis",
+      allowOffersPromotion: true,
+      aobUser: false,
+      cityName: "Florida",
+      country: "UNITED_STATES_US",
+      email: `admin@yopmail.com`,
+      firstName: "Admin",
+      lastName: "last",
+      loginName: `Anderson${faker.name.lastName()}`,
+      password: 'Admin@123',
+      phoneNumber: "+55011984848484",
+      stateProvince: "NY",
+      zipcode: "78058482"
+    };
+  };
 });
