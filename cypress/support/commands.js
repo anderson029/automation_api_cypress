@@ -1,25 +1,27 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import 'cypress-file-upload';
+
+import { buildLoginPayload } from '../support/payloadBuilder';
+
+Cypress.Commands.add('login', () => {
+  const LOGIN_ENDPOINT = `${Cypress.env('BASE_URL')}/accountservice/accountrest/api/v1/login`;
+
+  // Obtém as credenciais do usuário
+  return cy.task('getUserData').then((userData) => {
+    cy.log('Dados do usuário:', JSON.stringify(userData));
+    const credentials = buildLoginPayload(userData);
+
+    // Faz a requisição de login
+    return cy.api({
+      url: LOGIN_ENDPOINT,
+      method: 'POST',
+      body: credentials,
+    }).then((response) => {
+      expect(response.status).to.eql(200);
+      expect(response.body.statusMessage.reason).to.eql('Login Successful');
+
+      // Armazena o token e userId no Cypress.env()
+      Cypress.env('authToken', response.body.statusMessage.token);
+      Cypress.env('userId', response.body.statusMessage.userId);
+    });
+  });
+});
