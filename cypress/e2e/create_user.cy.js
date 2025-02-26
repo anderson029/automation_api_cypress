@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-const URL = `${Cypress.env('BASE_URL')}/accountservice/accountrest/api/v1/register`;
+const URL = `${Cypress.env('BASE_URL_ACCOUNT')}/register`;
 
 describe('Account users', () => {
   let userData;
