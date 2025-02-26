@@ -16,7 +16,6 @@ describe('Upload de imagem', () => {
     });
   });
 
-  
   it('Deve fazer upload de uma imagem', () => {
     const URL_UPDATE = `${Cypress.env('BASE_URL')}/catalog/api/v1/product/image/${userId}/source/black?product_id=15`;
     cy.fixture('update.jpg', 'binary').then((file) => {
