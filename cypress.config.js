@@ -8,7 +8,6 @@ module.exports = defineConfig({
       config.env.BASE_URL_PRODUCT = `${config.env.BASE_URL}/catalog/api/v1/products`;
       config.env.BASE_URL_ACCOUNT = `${config.env.BASE_URL}/accountservice/accountrest/api/v1`;
 
-
       on('task', {
         saveUserData(data) {
           fs.writeFileSync('cypress/fixtures/userData.json', JSON.stringify(data));
