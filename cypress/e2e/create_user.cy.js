@@ -15,6 +15,7 @@ describe('Account users', () => {
       expect(response.status).to.eql(200);
       expect(response.body.response.reason).to.eql('New user created successfully.');
       expect(response.body.response.userId).to.not.be.null;
+      cy.writeFile('cypress/responses/create_account.json', response.body);
     });
   });
 
@@ -22,6 +23,7 @@ describe('Account users', () => {
     createUser(userData).then(response => {
       expect(response.status).to.eql(403);
       expect(response.body.response.reason).to.eql('User name already exists');
+      cy.writeFile('cypress/responses/create_account_fail.json', response.body);
     });
   });
 

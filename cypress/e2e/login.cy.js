@@ -31,6 +31,7 @@ describe('Login de usuário', () => {
       Cypress.env('userId', userId);
 
       cy.task('saveResponseLogin', { token, userId});
+      cy.writeFile('cypress/responses/login_success.json', response.body);
     });
   });
 });

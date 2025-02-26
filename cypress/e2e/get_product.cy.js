@@ -5,6 +5,7 @@ describe('/products GET', () => {
       method: 'GET'
     }).then(response => {
       expect(response.status).to.eql(200)
+      cy.writeFile('cypress/responses/get_products.json', response.body);
     })
   })
 })

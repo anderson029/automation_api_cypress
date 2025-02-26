@@ -1,0 +1,7 @@
+{
+  "response": {
+    "success": false,
+    "userId": -1,
+    "reason": "User name already exists"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "productId": 15,
+  "categoryId": 2,
+  "productName": "Beats Studio 2 Over-Ear Matte Black Headphones",
+  "price": 179.99,
+  "description": "The world’s most famous headphone has been completely redesigned and reimagined. The new Beats Studio® is lighter, sexier, stronger, and more comfortable, with precision sound, Adaptive Noise Canceling, a 20-hour rechargeable battery, and RemoteTalk™. It has all the energy and excitement you expect from Beats, plus a powerful, reengineered sound.",
+  "imageUrl": "2200",
+  "attributes": [
+    {
+      "attributeName": "WEIGHT",
+      "attributeValue": "0.57 lb"
+    },
+    {
+      "attributeName": "CONNECTOR",
+      "attributeValue": "Jack 3.5 mm"
+    },
+    {
+      "attributeName": "COMPATIBILITY",
+      "attributeValue": "Compatible across all devices having 3.5 mm audio connector (Smart phone compatibility may vary)."
+    }
+  ],
+  "colors": [
+    {
+      "code": "414141",
+      "name": "BLACK",
+      "inStock": 10
+    }
+  ],
+  "images": [
+    "414141##2200",
+    "414141##2201",
+    "ABCDEF##custom_image_tst_01bd5126-9c45-4ca5-936c-00992d72ebc4",
+    "WHITE##custom_image_#FFFFF_0ed047aa-63f6-4b4a-9285-7df11c381a3c",
+    "WHITE##custom_image_#FFFFF_245652e4-3949-439c-ab89-251ffb9e924a",
+    "WHITE##custom_image_#FFFFF_33ccbaa8-f34a-4ea9-99db-632886dab2cd",
+    "WHITE##custom_image_#FFFFF_7c602206-a9e2-4b90-a20c-8b2dea1352f6",
+    "anderson##custom_image_source_203f31e6-beb6-4413-9d98-a358f6dfdcce",
+    "black##custom_image_source_0118d836-5703-4b5e-bff3-660a8e57da32",
+    "black##custom_image_source_01231f2a-fbfe-4970-b771-b7ca4a4f7d28",
+    "black##custom_image_source_086fb755-0027-4534-bac0-d666a609bf97",
+    "black##custom_image_source_0df7baf6-5fdc-4b9a-aa45-0a8495ace5ed",
+    "black##custom_image_source_11566959-2dc5-4c6b-a31d-f482e2f73132",
+    "black##custom_image_source_145afe55-e777-4916-a154-f145094b18ac",
+    "black##custom_image_source_1882b1a3-6e7d-4a71-b06f-f271859fc7f5",
+    "black##custom_image_source_197e481d-8158-40a7-9bd1-0a8aba108750",
+    "black##custom_image_source_1ae66970-c6f4-4ee4-9d98-a1e9a92daa58",
+    "black##custom_image_source_21e05b9e-3d3a-4109-b8eb-4192a2242318",
+    "black##custom_image_source_229c4c0c-d971-4720-b782-26e95f0f7e47",
+    "black##custom_image_source_2a482c31-3f1b-4058-b2a4-dac871ac4f4b",
+    "black##custom_image_source_2fcbd9b5-757f-4bbc-8511-ec47bdbbb222",
+    "black##custom_image_source_344b02fd-b399-4a52-9a03-51d2f58f1f83",
+    "black##custom_image_source_3cdf3b0c-6043-40c5-94ac-c64e022554eb",
+    "black##custom_image_source_40de8999-f841-43fa-ab26-c1f1e51a30ec",
+    "black##custom_image_source_42cb4891-057f-4075-b41d-e0241e6e29e5",
+    "black##custom_image_source_46677b88-094c-461b-a6ff-dfb02d49d238",
+    "black##custom_image_source_466e019d-f2e8-417f-972e-34f5d0591a92",
+    "black##custom_image_source_5475fd8b-da1d-4117-9e14-004dcb829ee1",
+    "black##custom_image_source_55effc35-7f4f-43f3-b525-fcd5ea25e362",
+    "black##custom_image_source_5f3cbb77-7bb5-403a-a44b-2b1e280cfcf5",
+    "black##custom_image_source_602fbb4b-b852-40f8-b9d0-65e292085bfa",
+    "black##custom_image_source_615e5b73-001f-42ba-a851-8a2e8df2adcc",
+    "black##custom_image_source_6cb0d133-d8ab-4009-afd5-edfe0e35e47c",
+    "black##custom_image_source_7ad08168-8c11-4e4a-812b-ea938a45b007",
+    "black##custom_image_source_7e6c61d2-e114-4385-9b52-7168e0295005",
+    "black##custom_image_source_80d738a9-2deb-47ac-9fa2-40f7a606cdb9",
+    "black##custom_image_source_83f75f68-24c1-4f35-a35d-35e7eea297d5",
+    "black##custom_image_source_84bd1a3b-22f8-4d2e-8f7c-78ca89cd14db",
+    "black##custom_image_source_860ff5b2-b491-4ed3-b9db-5ab864dd6da0",
+    "black##custom_image_source_8f994770-b384-4dd2-91a2-200c19f1ad0d",
+    "black##custom_image_source_92dd4ecf-e042-4585-8a4e-ad5f726392d6",
+    "black##custom_image_source_a0ab9dda-1d43-42ef-ba09-99c64df5eb74",
+    "black##custom_image_source_a22577bf-314a-419c-bd18-90b156499c83",
+    "black##custom_image_source_a456534c-f572-4116-84fe-afd6eb15b234",
+    "black##custom_image_source_b1c9d54a-bbc2-4475-a32a-665adca39273",
+    "black##custom_image_source_b371fb64-bf35-4b5a-8724-dd037489708c",
+    "black##custom_image_source_b5181e7a-0744-4c4b-80a5-58f8643ef3fe",
+    "black##custom_image_source_c46f0870-c029-43b5-96f3-72a48ebdf9a9",
+    "black##custom_image_source_c972fab6-01fe-43b0-86db-3eaa8b964a72",
+    "black##custom_image_source_cadf4226-2956-4b45-bf64-2d0e179a7ce7",
+    "black##custom_image_source_d327178b-aee7-42fc-b390-f5870f815fc6",
+    "black##custom_image_source_d87b43e3-e733-43ac-949a-215fbc83a308",
+    "black##custom_image_source_e0a7ab45-7604-451f-ae7d-bad24f0e0267",
+    "black##custom_image_source_e73d39b8-5c40-4f25-baa6-6195b526c9dd",
+    "black##custom_image_source_fb1403a6-3228-475d-ae1f-39f3d591b126",
+    "black##custom_image_source_fd96a1f9-6253-4774-b0f7-82d2790da030",
+    "blue##custom_image_source_8a9c4b35-a5a9-4079-b317-be70df6cb3df",
+    "oliveira##custom_image_source_e353498a-b02c-4a1d-8824-b2e6527f17e2"
+  ],
+  "productStatus": "Active"
+}
