@@ -1,10 +1,13 @@
 const { defineConfig } = require('cypress');
-const fs = require('fs'); // Importar o módulo fs
+const fs = require('fs'); 
 
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       config.env.BASE_URL = 'https://www.advantageonlineshopping.com';
+      config.env.BASE_URL_PRODUCT = `${config.env.BASE_URL}/catalog/api/v1/products`;
+      config.env.BASE_URL_ACCOUNT = `${config.env.BASE_URL}/accountservice/accountrest/api/v1`;
+
 
       on('task', {
         saveUserData(data) {
@@ -43,8 +46,6 @@ module.exports = defineConfig({
           }
         },
       });
-
-
 
       return config;
     },
