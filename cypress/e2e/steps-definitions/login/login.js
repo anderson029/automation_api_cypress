@@ -9,10 +9,6 @@ Given('que tenho a massa para fazer login', () => {
   createUser(userData).then((response) => {
     cy.wrap(response).as('createUserResponse');
 
-    loginEmail = userData.email;
-    loginName = userData.loginName;
-    loginPassword = userData.password;
-
     Cypress.env('loginEmail', userData.email);
     Cypress.env('loginName', userData.loginName);
     Cypress.env('loginPassword', userData.password);
@@ -20,15 +16,13 @@ Given('que tenho a massa para fazer login', () => {
 });
 
 When('faço a requisição post', () => {
-   const credentials = {
-    email: loginEmail,
-    loginUser: loginName,
-    loginPassword: loginPassword
+  const credentials = {
+    email: Cypress.env('loginEmail'),
+    loginUser: Cypress.env('loginName'),
+    loginPassword: Cypress.env('loginPassword')
   };
 
-  login(credentials).then((response) => {
-    cy.wrap(response).as('loginResponse');
-  });
+  login(credentials).as('loginResponse');
 });
 
 Then('vejo o status code {int}', (code) => {
@@ -39,8 +33,4 @@ Then('vejo o status code {int}', (code) => {
 
 Then('vejo a mensagem de sucesso {string}', (message) => {
   cy.get('@loginResponse').its('body.statusMessage.reason').should('eq', message);
-
-  // cy.get('@loginResponse').then((response) => {
-  //   cy.writeFile('cypress/responses/login_success.json', response.body);
-  // });
 });

@@ -21,9 +21,8 @@ export const login = (credentials) => {
     body: credentials,
   }).then((response) => {
     expect(response.status).to.eq(200); 
-    cy.log('Resposta do login:', JSON.stringify(response, null, 2)); 
     cy.writeFile('cypress/responses/login_response.json', response.body); 
-    
+
     return cy.wrap(response); 
   });
 };
