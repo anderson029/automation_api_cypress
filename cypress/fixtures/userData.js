@@ -11,7 +11,7 @@ export const generateUserData = () => {
     email: `admin@yopmail.com`,
     firstName: "Admin",
     lastName: "teste",
-    loginName: `Andertst${faker.name.lastName()}`,
+    loginName: `Anderts${faker.name.lastName()}`,
     password: 'Admin@123',
     phoneNumber: "+55011984848484",
     stateProvince: "NY",

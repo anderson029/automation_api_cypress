@@ -1,5 +1,6 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 import { generateUserData } from '../../../fixtures/userData';
+import {createUser} from '../../../support/api/accountApi'
 
 const URL = `${Cypress.env('BASE_URL_ACCOUNT')}/register`;
 let userData;
@@ -25,12 +26,3 @@ Then('a resposta de confirmação do cadastro',() =>{
     expect(response.body.response.userId).to.not.be.null;
   });
 })
-
-export const createUser = (userData) => {
-  return cy.api({
-    url: URL,
-    method: 'POST',
-    body: userData,
-    failOnStatusCode: false
-  });
-};
