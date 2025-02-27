@@ -3,7 +3,7 @@
 
 @login
 Funcionalidade: Login de usuário
-  
+
 @login_positive
 Cenário: Deve fazer login com o usuário criado
   Dado que tenho a massa para fazer login

@@ -1,7 +1,7 @@
-export const buildLoginPayload = () => {
-    return {
-      email: Cypress.env('email'),
-      loginUser: Cypress.env('loginName'),
-      loginPassword: Cypress.env('password'),
-    };
+export const buildLoginPayload = (email, loginUser, loginPassword) => {
+  return {
+    email: email,
+    loginUser: loginUser,
+    loginPassword: loginPassword,
   };
+};
