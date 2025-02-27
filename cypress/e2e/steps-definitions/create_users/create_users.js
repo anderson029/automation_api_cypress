@@ -2,7 +2,6 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 import { generateUserData } from '../../../fixtures/userData';
 import {createUser} from '../../../support/api/accountApi'
 
-const URL = `${Cypress.env('BASE_URL_ACCOUNT')}/register`;
 let userData;
 
 Given('que tenho uma massa válida',() =>{

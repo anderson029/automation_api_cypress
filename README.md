@@ -15,6 +15,7 @@ Se necessário, você pode baixar e instalar o Node.js a partir do site oficial.
 ## 🚀 Techs
 - Node
 - Cypress
+- Cucumber
 
 
 ## ⚙️Começando
